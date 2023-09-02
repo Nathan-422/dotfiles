@@ -19,8 +19,38 @@ end
 vim.cmd [[
 	augroup packer_user_config
 		autocmd!
-		autocmd BugWritePost plugins.lua source <afile> | PackerSync
+		autocmd BufWritePost plugins.lua source <afile> | PackerSync
 	augroup end
 ]]
 
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+	print "That didn't work"
+	return
+end
 
+-- Have packer use a popup window
+-- And use rounded borders
+packer.init {
+	display = {
+		open_fn = function()
+			return require("packer.util").float {border = "rounded"}
+		end,
+	},
+}
+
+-- Install your plugins here
+return packer.startup(function(use)
+	-- Plugins go here
+
+	use "wbthomason/packer.nvim" -- Packer managews itself
+	use "nvim-lua/poper.nvim" -- An implement ion of the popup API from vim in neovim
+	use "nvim.lua/plenary.nvim" -- Useful lua functions used by logs of plugins
+
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
+end)
