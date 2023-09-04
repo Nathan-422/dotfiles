@@ -4,11 +4,19 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# zsh200 config
+export ZSH_2000_DISABLE_RIGHT_PROMPT='false'		# disable right promp
+export ZSH_2000_DISABLE_RVM='true'			# disable RVM promp
+export ZSH_2000_DISABLE_STATUS='false'			# disable command exit status
+export ZSH_2000_DISABLE_GIT_STATUS='false'		# disable git status on top of clean/dirty
+# export ZSH_2000_DEFAULT_USER='YOUR_USER_NAME'		# disable user@hostname
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="zsh2000"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
