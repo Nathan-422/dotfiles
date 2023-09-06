@@ -1,0 +1,8 @@
+[user]
+	name = Nathan Wright
+	email = natiouswright@gmail.com
+[core]
+	editor = nvim 
+	excludesfile = /home/nathan/.gitignore_global
+[init]
+	defaultBranch = main
