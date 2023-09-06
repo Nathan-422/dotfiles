@@ -1,10 +1,7 @@
-mkdir ~/.config
-mkdir ~/.config/nvim
-mkdir ~/.config/nvim/lua
-mkdir ~/.config/nvim/lua/user
-ln -s ~/.dotfile/nvim/init.lua ~/.config/nvim/init.lua
-ln -s ~/.dotfile/nvim/lua/user/options.lua ~/.config/nvim/lua/user/options.lua
-ln -s ~/.dotfile/nvim/lua/user/keymaps.lua ~/.config/nvim/lua/user/keymaps.lua
-ln -s ~/.dotfile/nvim/lua/user/plugins.lua ~/.config/nvim/lua/user/plugins.lua
-ln -s ~/.dotfile/nvim/lua/user/theme.lua ~/.config/nvim/lua/user/theme.lua
-ln -s ~/.dotfile/nvim/lua/user/cmp.lua ~/.config/nvim/lua/user/cmp.lua
+# Install ripgrep for telescope
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+sudo dpkg -i ripgrep_13.0.0_amd64.deb
+
+# Symlink nvim config files
+mkdir -p ~/.config/nvim/lua/user
+cp -rs ~/.dotfile/nvim/ ~/.config/nvim/
