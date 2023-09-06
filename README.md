@@ -22,7 +22,7 @@ sudo apt update
 ```
 sudo apt-get install fonts-powerline
 
+cd ~/.oh-my-zsh/custom/themes/
 git clone https://github.com/consolemaverick/zsh2000.git
-cd zsh200
-ln -s zsh2000.zsh-theme ~/.oh-my-zsh/themes/zsh2000.zsh-theme
+ln -s ~/.oh-my-zsh/custom/themes/zsh2000.zsh-theme ~/.oh-my-zsh/themes/zsh2000.zsh-theme
 ```
