@@ -2,6 +2,12 @@ local servers = {
   "lua_ls",
 	"pyright",
 	"jsonls",
+	-- "cssls",
+  -- "custom_elements_ls",
+  -- "denols",
+  -- "eslint",
+  -- "html",
+  "tsserver",
 }
 
 local settings = {
